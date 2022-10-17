@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 const axios = Axios.create({
-    baseURL: 'https://api.abdalwahab.com';
+    baseURL: 'https://api.abdalwahab.com' 
     
 })
 
