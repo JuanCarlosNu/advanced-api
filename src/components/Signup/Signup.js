@@ -22,9 +22,18 @@ const Signup = () => {
     display: "block"
   };
 // validation
-  const signup = async values => {
+  const signup =  values => {
+    console.log(values)
+
+    const user = {
+      username : values.username,
+      email : values.email,
+      password : values.password,
+    };
+    //console.log(user)
+
     // create a user and send it to the api/DB
-    axios.post('/auth/new')
+    axios.post('/auth/new', user)
   };
 
   return (
