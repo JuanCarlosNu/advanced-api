@@ -1,6 +1,9 @@
 import Axios from "axios";
 
-Axios.create({
+const axios = Axios.create({
     baseURL: 'https://api.abdalwahab.com';
     
 })
+
+export default axios;
+

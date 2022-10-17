@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { Formik, Field, Form } from "formik";
 
 import "./Signup.css";
+import axios from '../../API/axios.js'
 
 const validationSchema = Yup.object().shape({
   username: Yup.string()
@@ -23,6 +24,7 @@ const Signup = () => {
 
   const signup = async values => {
     // create a user and send it to the api/DB
+    axios.post('/auth/new')
   };
 
   return (
