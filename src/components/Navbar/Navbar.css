@@ -1,0 +1,26 @@
+nav {
+  border-bottom: 2px solid rgb(224, 224, 224);
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.item {
+  margin: 0 1rem;
+  
+}
+
+.link {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+.active {
+  background-color: sandybrown;
+}
