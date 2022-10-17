@@ -21,7 +21,7 @@ const Signup = () => {
   const style = {
     display: "block"
   };
-
+// validation
   const signup = async values => {
     // create a user and send it to the api/DB
     axios.post('/auth/new')
