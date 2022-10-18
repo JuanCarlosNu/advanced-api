@@ -2,6 +2,8 @@ import React from "react";
 import * as Yup from "yup";
 import { Formik, Field, Form } from "formik";
 
+import axios from "../../API/axios";
+
 import "./../Signup/Signup.css";
 
 const validationSchema = Yup.object().shape({
@@ -14,8 +16,16 @@ const validationSchema = Yup.object().shape({
 });
 
 const Login = () => {
-  const login =  values => {
+  const login = async (values) => {
+
+
+    const user = {
+      email: values.email,
+      password : values.password,
+    }
+
     // login a user with needed info
+    await axios.post('auth/login', user)
   };
 
   return (
