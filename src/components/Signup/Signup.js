@@ -22,7 +22,7 @@ const Signup = () => {
     display: "block"
   };
 // validation
-  const signup =  values => {
+  const signup = async (values) => {
     console.log(values)
 
     const user = {
@@ -33,7 +33,7 @@ const Signup = () => {
     //console.log(user)
 
     // create a user and send it to the api/DB
-    axios.post('/auth/new', user)
+    await axios.post('/auth/new', user) // in the next section we ll replace this for a valid url
   };
 
   return (
