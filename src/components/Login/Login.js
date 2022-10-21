@@ -21,11 +21,11 @@ const Login = () => {
 
     const user = {
       email: values.email,
-      password : values.password,
+      password: values.password,
     }
 
     // login a user with needed info
-    await axios.post('auth/login', user)
+    await axios.post('/login', user)
   };
 
   return (
