@@ -22,7 +22,7 @@ const Signup = () => {
     display: "block"
   };
 // validation
-  const signup = async (values) => {
+  const signup = async values => {
     console.log(values)
 
     const user = {
