@@ -1,5 +1,5 @@
 import React from "react";
-import * as Yup from "yup";
+import * as Yup from 'yup';
 import { Formik, Field, Form } from "formik";
 
 import axios from "../../API/axios";
@@ -9,7 +9,7 @@ import "./../Signup/Signup.css";
 const validationSchema = Yup.object().shape({
   email: Yup.string()
     .email("please fill out your email")
-    .required("email can be empty"),
+    .required("email cant be empty"),
   password: Yup.string()
     .min(6, "password can not be less than 6")
     .required("please enter your password")
