@@ -25,8 +25,11 @@ const Login = () => {
     }
 
     // login a user with needed info
-    await axios.post('/login', user)
-  };
+  const {data : token} = await axios.post('/login', user)
+
+  localStorage.setItem('token', token)
+   window.location= '/home'
+};
 
   return (
     <div>
