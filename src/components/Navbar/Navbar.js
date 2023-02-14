@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import decode from 'jwt-decode'
@@ -26,6 +26,9 @@ let name;
           </NavLink>
         </li>
 
+        {
+        !name ?
+        <React.Fragment>
         <li className="item">
           <NavLink className="link" to="/login">
             LogIn
@@ -35,6 +38,11 @@ let name;
           <NavLink className="link" to="/signup">
             SignUp
           </NavLink>
+        </li>
+        </React.Fragment>
+        : null}
+        <li className="item">
+          <NavLink className="link" to="/logout">Logout</NavLink>
         </li>
       </ul>
     </nav>
