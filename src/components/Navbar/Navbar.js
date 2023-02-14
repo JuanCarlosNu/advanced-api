@@ -41,9 +41,15 @@ let name;
         </li>
         </React.Fragment>
         : null}
-        <li className="item">
+        {
+          name? 
+          <li className="item">
           <NavLink className="link" to="/logout">Logout</NavLink>
-        </li>
+          </li>
+          : null
+
+        }
+        
       </ul>
     </nav>
   );
