@@ -33,7 +33,9 @@ const Signup = () => {
     //console.log(user)
 
     // create a user and send it to the api/DB
-    await axios.post('/register', user) // done!
+    await axios.post('/register', user);
+
+    window.location = '/login'
   };
 
   return (
